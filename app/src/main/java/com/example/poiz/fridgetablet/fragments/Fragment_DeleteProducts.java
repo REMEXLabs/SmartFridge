@@ -456,6 +456,7 @@ public class Fragment_DeleteProducts extends Fragment implements AsyncResponse,A
     }
 
     public void deleteProduct(String productJson){
+         productJson = productJson.replace("productname","productName");
         new SocketClientAsyncTask(this,this.faActivity).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, "030" + productJson);
     }
 
