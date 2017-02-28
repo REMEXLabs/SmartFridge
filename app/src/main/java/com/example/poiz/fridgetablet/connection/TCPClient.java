@@ -87,7 +87,7 @@ public class TCPClient{
 
 
 
-        if(command.substring(0,3).equals("010")|| command.substring(0,3).equals("011") || command.substring(0,3).equals("012")) {
+        if(command.substring(0,3).equals("010")|| command.substring(0,3).equals("011") || command.substring(0,3).equals("012") || command.substring(0,3).equals("014")|| command.substring(0,3).equals("014")) {
 
             try {
 
@@ -151,7 +151,7 @@ public class TCPClient{
 
             }
             Log.d("http", "time for http!1");
-        }else{
+        }if(!command.substring(0,3).equals("010")&& !command.substring(0,3).equals("011") && !command.substring(0,3).equals("012")){
             //do httpRequest
             Log.d("http", "time for http!");
             String taskcode = "";
