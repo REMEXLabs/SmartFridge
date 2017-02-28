@@ -618,6 +618,7 @@ public class Fragment_ManageProducts extends Fragment implements AsyncResponse,A
 
     }
     public void saveProduct(String productJson){
+         productJson = productJson.replace("productname","productName");
         new SocketClientAsyncTask(this,this.faActivity).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, "016" + productJson);
     }
 
